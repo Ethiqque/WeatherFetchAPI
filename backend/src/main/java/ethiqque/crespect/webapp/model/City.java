@@ -1,7 +1,6 @@
 package ethiqque.crespect.webapp.model;
 
 import jakarta.persistence.*;
-import lombok.*;
 
 @Entity
 public class City {

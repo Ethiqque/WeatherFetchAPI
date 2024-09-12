@@ -3,7 +3,6 @@ package ethiqque.crespect.webapp.service.city;
 import ethiqque.crespect.webapp.model.City;
 import ethiqque.crespect.webapp.repository.CityRepository;
 import ethiqque.crespect.webapp.service.weather.WeatherService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
