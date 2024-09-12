@@ -16,3 +16,6 @@ Nice to have:
 
 <img width="1440" alt="Screenshot 2024-09-12 at 05 13 18" src="https://github.com/user-attachments/assets/44e75fc3-d9ff-4933-ac62-59538e6d7cca">
 <img width="1440" alt="Screenshot 2024-09-12 at 05 13 53" src="https://github.com/user-attachments/assets/22e797aa-cdfd-440a-9040-7cba90ad6a5d">
+
+Video of using:
+https://drive.google.com/file/d/1vCaQoSEfN_X_X-or3n7iXhF0az2yi2-r/view?usp=sharing
