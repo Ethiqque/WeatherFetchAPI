@@ -1,0 +1,48 @@
+services:
+  backend:
+    image: openjdk:17-alpine
+    platform: linux/amd64
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+    command: ["java", "-jar", "target/your-backend-app.jar"]
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/weather
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=password
+      - OPENWEATHERMAP_API_KEY=6557810176c36fac5f0db536711a6c52
+      - SPRING_REDIS_HOST=redis
+      - SPRING_REDIS_PORT=6379
+    depends_on:
+      - db
+      - redis
+
+  frontend:
+    image: node:18-alpine
+    platform: linux/amd64
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    command: ["sh", "-c", "npm install && npm run build && npx serve -s build"]
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:15
+    platform: linux/amd64
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=weather
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:latest
+    platform: linux/amd64
+    ports:
+      - "6379:6379"
