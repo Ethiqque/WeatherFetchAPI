@@ -1,4 +1,7 @@
- 
+# City Temperature FullStack WebApp: Loads 100 city temperature using openweathermap API
+
+## Introduction
+
 Functionality requirements.
 When application starts, script loads 100 city names to database and queries current temperature for all 100 cities.
 After every restart, script should delete all temperature data and load new data.
